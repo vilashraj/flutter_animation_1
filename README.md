@@ -1,6 +1,6 @@
 # animation1
 
-A new Flutter project.
+This project helps us to understand the basic concepts of flutter animations.
 
 ## Getting Started
 

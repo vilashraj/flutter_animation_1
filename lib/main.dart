@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin{
   //Animation
   Animation<double> backgroundAnimation;
   Animation<double> bubbleAnimation;
-  
+
   //Animation Controller
   AnimationController bubbleController;
   AnimationController _backgroundController;
@@ -208,7 +208,7 @@ if(!areBubblesAdded){
       var left = leftPos == 0?range.nextInt(MediaQuery.of(context).size.width.toInt()).toDouble():leftPos;
       var top = topPos == 0?range.nextInt(MediaQuery.of(context).size.height.toInt()).toDouble():topPos;
 
-      var btn = new Positioned(
+      var bubble = new Positioned(
           left: left,
           top: top,
           child: AnimatedBubble(animation: animation,startSize: minSize,endSize: maxSize)
@@ -216,7 +216,7 @@ if(!areBubblesAdded){
 
       setState(() {
         areBubblesAdded = true;
-        bubbleWidgets.add(btn);
+        bubbleWidgets.add(bubble);
       });
     }
   }
